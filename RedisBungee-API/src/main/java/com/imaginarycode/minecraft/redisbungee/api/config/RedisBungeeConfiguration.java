@@ -14,6 +14,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.net.InetAddresses;
+import eu.cloudnetservice.wrapper.Wrapper;
 
 import java.net.InetAddress;
 import java.util.HashMap;
@@ -36,7 +37,7 @@ public class RedisBungeeConfiguration {
     private final boolean restoreOldKickBehavior;
 
     public RedisBungeeConfiguration(String proxyId, List<String> exemptAddresses, boolean registerLegacyCommands, boolean overrideBungeeCommands, ImmutableMap<MessageType, String> messages, boolean restoreOldKickBehavior) {
-        this.proxyId = proxyId;
+        this.proxyId = Wrapper.instance().serviceId().name();
         this.messages = messages;
         ImmutableList.Builder<InetAddress> addressBuilder = ImmutableList.builder();
         for (String s : exemptAddresses) {

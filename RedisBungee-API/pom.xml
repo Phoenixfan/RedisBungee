@@ -89,6 +89,12 @@
             <artifactId>configurate-yaml</artifactId>
             <version>3.7.2</version>
         </dependency>
+        <dependency>
+            <groupId>eu.cloudnetservice.cloudnet</groupId>
+            <artifactId>wrapper-jvm</artifactId>
+            <version>4.0.0-RC5</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>
